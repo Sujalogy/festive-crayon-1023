@@ -4,9 +4,17 @@ const {UserModel} = require('../Models/user.model.js');
 const {redis} = require('../redis.js');
 const register = async function (req, res) {
     try {
-        const {name, email, password, isAdmin} = req.body;
+        let {name, email, password, isAdmin} = req.body;
+        if (!name) throw new Error('Name cannot be blank !');
+        if (!email) throw new Error('Email cannot be blank !');
+        if (!password) throw new Error('Password cannot be blank !');
         bcrypt.hash(password, 5, async function (err, hash) {
-            if (err) throw new Error(err.message);
+            if (err) {
+                return res.status(400).json({
+                    status: 'fail',
+                    error: err.message,
+                });
+            }
             if (!isAdmin) isAdmin = false;
             const newUser = new UserModel({
                 name,
@@ -15,27 +23,33 @@ const register = async function (req, res) {
                 isAdmin,
             });
             await newUser.save();
+            newUser.password = password;
             return res.status(200).json({
                 status: 'success',
                 message: 'User Registration Successfull',
-                user: req.body,
+                user: newUser,
             });
         });
     } catch (err) {
         return res.status(400).json({
             status: 'fail',
-            error: error.message,
+            error: err.message,
         });
     }
 };
 
 const login = async function (req, res) {
     try {
-        const {email, pass} = req.body;
+        const {email, password} = req.body;
         const user = await UserModel.findOne({email});
         if (!user) throw new Error('User Not Found !');
-        bcrypt.compare(pass, user.pass, async function (err, result) {
-            if (err) throw new Error(err.message);
+        bcrypt.compare(password, user.password, async function (err, result) {
+            if (err) {
+                return res.status(400).json({
+                    status: 'fail',
+                    error: err.message,
+                });
+            }
             if (!result) throw new Error('Wrong Password');
             else {
                 const token = jwt.sign(
