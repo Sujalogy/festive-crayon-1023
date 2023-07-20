@@ -1,19 +1,20 @@
+require('dotenv').config();
 const express = require('express');
+const {connection} = require('./db.js');
+const {authRouter} = require('./Routes/auth.routes.js');
+
 const app = express();
-const mongoose = require('mongoose');
-const dotenv = require('dotenv');
+const PORT = process.env.PORT || 4500;
 
-dotenv.config();
+app.use(express.json());
+app.use('/api/auth', authRouter);
 
-mongoose
-    .connect(process.env.MONGO_URL)
-    .then(function () {
-        console.log('DB Connection Successfull');
-    })
-    .catch(function (err) {
-        console.log(err.message);
-    });
-
-app.listen(process.env.PORT || 5000, function () {
-    console.log('Backend Server is running');
+app.listen(PORT, async function () {
+    try {
+        console.log('Server is in process');
+        await connection;
+        console.log(`Server running on : http://localhost:${PORT}`);
+    } catch (error) {
+        console.log(error);
+    }
 });
