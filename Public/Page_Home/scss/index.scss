@@ -1,14 +1,16 @@
-@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
 * {
   padding: 0px;
   margin: 0px;
-  font-family: "Josefin Sans", sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 header {
   height: 82px;
   nav {
+    display: fixed;
+    z-index: 999;
     border-bottom: 1px solid #c3c3c3;
     height: 82px;
     display: flex;
@@ -28,18 +30,23 @@ header {
       }
       .categories-section {
         ul {
+          // border: 1px solid #000;
           position: absolute;
-          top: 33.7px;
-          width: 420px;
+          top: -8.9px;
+          width: 430px;
           display: flex;
           text-align: center;
           justify-content: space-between;
+          gap: 10px;
           li {
+            // border: 1px solid #000;
             list-style-type: none;
+            position: relative;
+            padding: 34px 0px;
             a {
               text-decoration: none;
               color: black;
-              font-size: 17px;
+              font-size: 15px;
               cursor: pointer;
               position: relative;
             }
@@ -58,6 +65,37 @@ header {
             }
             a:hover {
               font-weight: 900;
+            }
+          }
+          .category-dropdown {
+            position: absolute;
+            top: 91px;
+            left: -175px;
+            background-color: white;
+            border: 1px solid #000;
+            border-top: 0px solid #000;
+            padding: 25px;
+            display: grid;
+            grid-template-columns: auto auto auto auto auto;
+            gap: 14px 60px;
+            z-index: -1;
+            display: none;
+            div {
+              display: flex;
+              width: 180px;
+              align-items: center;
+              img {
+                width: 50px;
+                height: 50px;
+              }
+              p {
+                font-size: 11px;
+              }
+            }
+            div:hover{
+              opacity: 0.7;
+              cursor: pointer;
+              transition: 0.4s ease-out;
             }
           }
         }
@@ -87,12 +125,13 @@ header {
         }
         input::-webkit-input-placeholder {
           background-image: url("https://cdn-icons-png.flaticon.com/128/54/54481.png");
-          background-size: contain;
+          background-size: 15px;
           background-repeat: no-repeat;
           padding-left: 25px;
+          // position: relative;
         }
         input:focus {
-          font-size: 18px;
+          font-size: 13.5px;
         }
         input::-ms-clear,
         input::-ms-reveal {
@@ -118,6 +157,99 @@ header {
           height: 22px;
           width: 22px;
         }
+        // //////////////////////////////////////////////////////////////////
+        .before-login-popup {
+          display: none;
+          border: 1px solid #000;
+          padding: 10px;
+          width: 200px;
+          height: 65px;
+          position: absolute;
+          right: 8px;
+          background-color: white;
+          border: 1px solid #ccc;
+          box-shadow: 0 2px 2px 2px #ccc;
+          top: 72px;
+          border-radius: 0.25rem;
+          span {
+            position: absolute;
+            left: 196.5px;
+            color: #1c7ed6;
+            top: 3px;
+            font-size: 19px;
+            cursor: pointer;
+            font-weight: 900;
+          }
+          p {
+            color: #1c7ed6;
+            font-size: 14px;
+            font-weight: 590;
+          }
+          button {
+            width: 200px;
+            height: 31px;
+            border: none;
+            background-color: #1c7ed6;
+            color: white;
+            font-size: 13px;
+            font-weight: 900;
+            cursor: pointer;
+            position: relative;
+            top: 11px;
+          }
+        }
+        .after-login-popup {
+          display: none;
+          border: 1px solid #000;
+          width: 200px;
+          height: 159px;
+          padding: 10px;
+          position: absolute;
+          top: 72px;
+          right: 8px;
+          background-color: white;
+          border: 1px solid #ccc;
+          box-shadow: 0 2px 2px 2px #ccc;
+          span {
+            position: absolute;
+            left: 196.5px;
+            color: #1c7ed6;
+            top: 3px;
+            font-size: 19px;
+            cursor: pointer;
+            font-weight: 900;
+          }
+          p {
+            color: #1c7ed6;
+            font-size: 14px;
+            font-weight: 590;
+          }
+          a {
+            position: relative;
+            right: 8px;
+            display: block;
+            margin: 7.35px;
+            text-decoration: none;
+            font-size: 14px;
+            color: black;
+             i {
+              color: #1c7ed6;
+             }
+          }
+          button {
+            width: 200px;
+            height: 31px;
+            border: none;
+            background-color: #1c7ed6;
+            color: white;
+            font-size: 13px;
+            font-weight: 900;
+            cursor: pointer;
+            position: relative;
+            top: 14px;
+          }
+        }
+        // //////////////////////////////////////////////////////////////////
       }
     }
   }
