@@ -2,19 +2,15 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="./Public/Page_Home/scss/index.css" />
-    <link rel="stylesheet" href="./Public/Page_Home/scss/hero.css">
+    <link rel="stylesheet" href="../Page_Home/scss/index.css" />
+    <link rel="stylesheet" href="../Page_login/scss/login.css">
     <link
       href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css"
       rel="stylesheet"
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Connect.com | Home Page | Buy EarBuds | ...</title>
-    <link
-      rel="icon"
-      href="./Public/icons/favicon-32x32.png"
-      type="image/x-icon"
-    />
+    <link rel="icon" href="../icons/favicon-32x32.png" type="image/x-icon" />
   </head>
   <body>
     <header>
@@ -22,9 +18,9 @@
       <nav>
         <div class="left-side-nav">
           <div class="logo-section">
-            <a href="./index.html" class="logo-link">
+            <a href="../../index.html" class="logo-link">
               <img
-                src="./Public/logo/connectLogo2-removebg-preview.png"
+                src="../logo/connectLogo2-removebg-preview.png"
                 alt="Logo"
                 width="120"
               />
@@ -194,7 +190,7 @@
           </div>
           <div class="profile-cart">
             <img
-              src="./Public/icons/user2.png"
+              src="../icons/user2.png"
               id="before_login_click"
               alt="User ICON"
             />
@@ -202,7 +198,7 @@
             <div class="before-login-popup" id="before_login_popup">
               <span id="close_popup"><i class="ri-close-line"></i></span>
               <p id="user_name">Hi ConnecTors!</p>
-              <a href="./Public/Page_login/login.html"
+              <a href="../Page_login/index.html"
                 ><button id="login_btn">Login</button></a
               >
             </div>
@@ -218,7 +214,7 @@
             <!--!------------------------------------------------------------------------------------------------>
 
             <img
-              src="./Public/icons/shopping-bag2.png"
+              src="../icons/shopping-bag2.png"
               id="cart_icon"
               alt="cart ICON"
             />
@@ -262,7 +258,6 @@
                     </div>
                   </div>
                   <div class="product-cart-div">
-                    
                     <div class="a-product">
                       <img
                         src="https://www.boat-lifestyle.com/cdn/shop/products/103-pro-pink_160x.png?v=1666696424"
@@ -327,7 +322,7 @@
                       <div>
                         <p>
                           <img
-                            src="./Public/icons/discount.png"
+                            src="../icons/discount.png"
                             alt="discount icon"
                           />
                         </p>
@@ -363,33 +358,32 @@
           </div>
         </div>
       </nav>
-      <!-- * Hero section ----------------- -->
-      <div class="header-img-slider" id="header_div_slider">
-        <div class="side-button">
-          <span id="left_arrow" class="left-arrow">
-            <i class="ri-arrow-left-circle-fill"></i>
-          </span>
-          <span id="right_arrow" class="right-arrow">
-            <i class="ri-arrow-right-circle-fill"></i>
-          </span>
-        </div>
-        <img
-          id="slide_images"
-          src="https://www.boat-lifestyle.com/cdn/shop/files/ADMAX_desktop_1499_1440x.jpg?v=1689662385"
-          alt=""
-        />
-      </div>
     </header>
-   
+
     <!-- TODO Main section ----------------- -->
-    <section id="main_section" class="main-section">
-      <div class="tp">
-        <h1>hello</h1>
+    <section>
+      <div class="login-header">
+        <p>Hello</p>
+        <p>ConnecTors</p>
+      </div>
+      <div class="login-form">
+        <form action="">
+          <label for="name"> Name :</label>
+          <br>
+          <input type="text" id="name">
+          <br>
+          <label for="">E-mail :</label>
+          <br>
+          <input type="email">
+          <br>
+          <label for=""> password :</label>
+          <br>
+          <input type="password">
+        </form>
       </div>
     </section>
-  
+
     <!-- TODO Footer section --------------- -->
   </body>
-  <script src="./Public/Page_Home/js/index.js"></script>
-  <script src="./Public/Page_Home/js/hero.js"></script>
+  <script src="../Page_Home/js/index.js"></script>
 </html>

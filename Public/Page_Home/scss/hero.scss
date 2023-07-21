@@ -1,0 +1,64 @@
+header {
+  .header-img-slider {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    .side-button {
+      display: flex;
+      justify-content: space-between;
+      .left-arrow {
+        position: absolute;
+        top: 235px;
+        left: 20px;
+        padding: 10px;
+        border: none;
+        color: white;
+        cursor: pointer;
+        i {
+          position: inherit;
+          top: 5.4px;
+          font-size: 37px;
+          color: #1a2120;
+          border-radius: 50%;
+        }
+      }
+      .right-arrow {
+        position: absolute;
+        top: 230px;
+        right: 60px;
+        padding: 10px;
+        border: none;
+        color: white;
+        cursor: pointer;
+        i {
+          position: inherit;
+          top: 5.4px;
+          font-size: 37px;
+          color: #1a2120;
+        }
+      }
+    }
+    .carousel-dots {
+      display: flex;
+      justify-content: center;
+      position: absolute;
+      bottom: 20px;
+      width: 100%;
+      .carousel-dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: #bbb;
+        margin: 0 5px;
+        cursor: pointer;
+      }
+      .carousel-dot.active {
+        background-color: #333;
+      }
+    }
+    img {
+      width: 100%;
+      transition: transform 0.5s ease;
+    }
+  }
+}
