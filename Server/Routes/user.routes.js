@@ -14,4 +14,5 @@ userRouter.delete('/:email', verifyToken, deleteUser);
 userRouter.get('/:email', verifyToken, getUserbyEmail);
 userRouter.get('/search/:email', verifyAdmin, searchUser);
 userRouter.get('/', verifyAdmin, getAllUsers);
+
 module.exports = {userRouter};
