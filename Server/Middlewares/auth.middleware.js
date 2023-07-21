@@ -23,9 +23,7 @@ const verifyToken = async function (req, res, next) {
             }
 
             if (decoded) {
-                req.body.userName = decoded.userName;
-                req.body.isAdmin = decoded.isAdmin;
-                req.body.userID = decoded.userID;
+                req.body.decoded = decoded;
                 next();
             }
         });
@@ -58,9 +56,7 @@ const verifyAdmin = async function (req, res, next) {
             }
 
             if (decoded) {
-                req.body.userName = decoded.userName;
-                req.body.isAdmin = decoded.isAdmin;
-                req.body.userID = decoded.userID;
+                req.body.decoded = decoded;
                 if (decoded.isAdmin) next();
                 else {
                     return res.status(400).json({

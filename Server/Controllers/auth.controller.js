@@ -3,6 +3,7 @@ const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const {UserModel} = require('../Models/user.model.js');
 const {BlackListModel} = require('../Models/blacklist.model.js');
+
 const register = async function (req, res) {
     try {
         let {name, email, password, isAdmin} = req.body;
