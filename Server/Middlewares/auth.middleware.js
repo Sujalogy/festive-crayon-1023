@@ -49,7 +49,7 @@ const verifyAdmin = async function (req, res, next) {
         const token = req.headers.authorization?.split(' ')[1];
         const isBlack = await BlackListModel.findOne({token: token});
         if (isBlack) throw new Error('Please Login !');
-        jwt.verify(token, process.env.JET_SEC, async function (err, decoded) {
+        jwt.verify(token, process.env.JWT_SEC, async function (err, decoded) {
             if (err) {
                 return res.status(400).json({
                     status: 'fail',
@@ -65,8 +65,16 @@ const verifyAdmin = async function (req, res, next) {
             }
 
             if (decoded) {
-                req.body.decoded = decoded;
-                if (decoded.isAdmin) next();
+                const user = await UserModel.findOne({_id: decoded.userID});
+
+                req.body.decoded = {
+                    userID: decoded.userID,
+                    userName: user.name,
+                    userEmail: user.email,
+                    userAdmin: user.isAdmin,
+                };
+
+                if (user.isAdmin) next();
                 else {
                     return res.status(400).json({
                         status: 'fail',

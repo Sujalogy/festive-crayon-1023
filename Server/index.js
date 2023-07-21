@@ -9,11 +9,11 @@ const PORT = process.env.PORT || 4500;
 
 app.use(express.json());
 app.use('/api/auth', authRouter);
-app.use('/api/user', userRouter);
+app.use('/api/users', userRouter);
 
 app.listen(PORT, async function () {
     try {
-        console.log('Server is in process');
+        console.log('Server is in process...');
         await connection;
         console.log(`Server running on : http://localhost:${PORT}`);
     } catch (error) {

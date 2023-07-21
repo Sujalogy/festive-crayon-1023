@@ -10,7 +10,7 @@ const register = async function (req, res) {
         if (!name) throw new Error('Name cannot be blank !');
         if (!email) throw new Error('Email cannot be blank !');
         if (!password) throw new Error('Password cannot be blank !');
-        const user = UserModel.findOne({email});
+        const user = await UserModel.findOne({email});
         if (user) throw new Error('User Already Exist');
         bcrypt.hash(password, 5, async function (err, hash) {
             if (err) {
@@ -90,7 +90,7 @@ const logout = async function (req, res) {
             await newToken.save();
         }
 
-        return res.status(400).json({
+        return res.status(200).json({
             status: 'success',
             message: 'Logout Successfull',
         });
