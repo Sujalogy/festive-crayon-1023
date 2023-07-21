@@ -1,3 +1,4 @@
+require('dotenv').config();
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const {UserModel} = require('../Models/user.model.js');
@@ -60,7 +61,7 @@ const login = async function (req, res) {
                         userName: user.name,
                         isAdmin: user.isAdmin,
                     },
-                    'masai',
+                    process.env.JWT_SEC,
                     {expiresIn: '3d'}
                 );
 
