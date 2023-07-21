@@ -1,14 +1,16 @@
+require('dotenv').config();
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const {UserModel} = require('../Models/user.model.js');
-const {redis} = require('../redis.js');
+const {BlackListModel} = require('../Models/blacklist.model.js');
+
 const register = async function (req, res) {
     try {
         let {name, email, password, isAdmin} = req.body;
         if (!name) throw new Error('Name cannot be blank !');
         if (!email) throw new Error('Email cannot be blank !');
         if (!password) throw new Error('Password cannot be blank !');
-        const user = UserModel.findOne({email});
+        const user = await UserModel.findOne({email});
         if (user) throw new Error('User Already Exist');
         bcrypt.hash(password, 5, async function (err, hash) {
             if (err) {
@@ -57,10 +59,8 @@ const login = async function (req, res) {
                 const token = jwt.sign(
                     {
                         userID: user._id,
-                        userName: user.name,
-                        isAdmin: user.isAdmin,
                     },
-                    'masai',
+                    process.env.JWT_SEC,
                     {expiresIn: '3d'}
                 );
 
@@ -84,9 +84,13 @@ const logout = async function (req, res) {
         const token = req.headers.authorization?.split(' ')[1];
         if (!token) throw new Error('Token not found');
 
-        await redis.set(token, 'true');
+        const exist = await BlackListModel.findOne({token: token});
+        if (!exist) {
+            const newToken = new BlackListModel({token: token});
+            await newToken.save();
+        }
 
-        return res.status(400).json({
+        return res.status(200).json({
             status: 'success',
             message: 'Logout Successfull',
         });
