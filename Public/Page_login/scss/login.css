@@ -1,0 +1,32 @@
+section .login-header {
+  text-align: center;
+  margin-top: 10px;
+}
+section .login-header p {
+  font-size: 40px;
+  font-weight: 900;
+}
+section .login-header p:nth-child(2) {
+  display: inline;
+  color: dodgerblue;
+  border: none;
+  padding: 0 20px 20px 20px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 29px 0px -25px;
+}
+section .login-form {
+  width: 400px;
+  margin: auto;
+  margin-top: 30px;
+}
+section .login-form form {
+  text-align: justify;
+  width: 204px;
+  margin: auto;
+}
+section .login-form form label {
+  font-size: 20px;
+}
+section .login-form form input {
+  width: 200px;
+  height: 30px;
+}/*# sourceMappingURL=login.css.map */
