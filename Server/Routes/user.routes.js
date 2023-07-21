@@ -1,6 +1,7 @@
-const router = require('express');
+const express = require('express');
 const {updateUser} = require('../Controllers/user.controller.js');
 const {verifyAdmin, verifyToken} = require('../Middlewares/auth.middleware.js');
 const userRouter = express.Router();
 
-userRouter.patch('/:id', verifyToken, updateUser);
+userRouter.patch('/:email', verifyToken, updateUser);
+module.exports = {userRouter};
