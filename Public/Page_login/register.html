@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="../Page_Home/scss/index.css" />
     <link rel="stylesheet" href="../Page_login/scss/login.css">
+    <link rel="stylesheet" href="../Page_login/scss/congrats.css">
     <link
       href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css"
       rel="stylesheet"
@@ -198,14 +199,14 @@
             <div class="before-login-popup" id="before_login_popup">
               <span id="close_popup"><i class="ri-close-line"></i></span>
               <p id="user_name">Hi ConnecTors!</p>
-              <a href="../Page_login/index.html"
+              <a href="./login.html"
                 ><button id="login_btn">Login</button></a
               >
             </div>
 
             <div class="after-login-popup" id="after_login_popup">
               <span id="close_popup2"><i class="ri-close-line"></i></span>
-              <p id="greet_to_name">Hi Sujal!</p>
+              <p id="greet_to_name">Hi <span id="user_name_popup"></span></p>
               <a href="#">Manage Your Order</a>
               <a href="#">Account</a>
               <a href="#">WishList <i class="ri-heart-3-fill"></i></a>
@@ -361,7 +362,7 @@
     </header>
 
     <!-- TODO Main section ----------------- -->
-    <section>
+    <section id="login_header">
       <div class="login-header">
         <p>Hello</p>
         <p>ConnecTors</p>
@@ -371,16 +372,26 @@
         <p>Already a ConnecTor? <a href="./login.html">Login with your E-mail</a></p>
       </div>
       <div class="login-form">
-        <form action="">
-          <input type="text" id="name" placeholder="Your Name" required>
-          <input type="email" placeholder="Your E-mail" required>
-          <input type="password" placeholder="Password" required> 
-          <input type="submit" value="Register"/>
+        <form>
+          <input type="text" id="name" name="name" placeholder="Your Name">
+          <input type="email" id="email" name="email" placeholder="Your E-mail">
+          <input type="password" id="password" name="password" placeholder="Password" >
+          <input type="submit" id="registrationBtn" value="Register"/>
         </form>
+      </div>
+    </section>
+    <section id="show_congrats">
+      <img src="https://symbl-world.akamaized.net/i/webp/90/3f14c188d9e4b258280f5e5c23fb28.webp" alt="">
+      <div class="yoohoo">
+        <h3>Woohooo!!!</h3>
+        <h3>You are successfully logged in...</h3>
+        <p>Redirecting you to the base in</p>
+        <p><span id="redirecting">0</span>&nbsp;seconds...</p>
       </div>
     </section>
 
     <!-- TODO Footer section --------------- -->
   </body>
   <script src="../Page_Home/js/index.js"></script>
+  <script src="../Page_login/js/register.js"></script>
 </html>

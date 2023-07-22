@@ -1,0 +1,21 @@
+#show_congrats {
+  box-sizing: border-box;
+  display: none;
+  justify-content: center;
+  line-height: 40px;
+  gap: 40px;
+  margin-top: 30px;
+}
+#show_congrats img {
+  width: 100px;
+  position: relative;
+  left: 120px;
+}
+#show_congrats h3 {
+  display: block;
+  text-align: center;
+  line-height: 40px;
+}
+#show_congrats p {
+  text-align: center;
+}/*# sourceMappingURL=congrats.css.map */

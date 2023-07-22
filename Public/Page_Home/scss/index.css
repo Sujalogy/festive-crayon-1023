@@ -536,4 +536,8 @@ header nav .profile-section .profile-cart .cart-slider-popup .main-cart-containe
 header nav .profile-section .profile-cart .cart-slider-popup.show {
   right: 0;
   overflow: hidden;
+}
+
+.main-section {
+  padding: 0px 40px;
 }/*# sourceMappingURL=index.css.map */
