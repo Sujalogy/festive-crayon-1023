@@ -5,7 +5,7 @@ const {
     deleteProduct,
     getProductByID,
     getAllProducts,
-} = require('../Controllers.procucts.controller.js');
+} = require('../Controllers/product.controller.js');
 const {verifyAdmin} = require('../Middlewares/auth.middleware.js');
 const productRouter = express.Router();
 

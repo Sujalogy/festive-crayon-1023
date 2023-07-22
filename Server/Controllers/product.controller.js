@@ -1,38 +1,68 @@
 const {ProductModel} = require('../Models/product.model.js');
 
-const checkProductFields = function (product) {
-    const {
-        title,
-        brand,
-        img,
-        category,
-        color,
-        price,
-        description,
-        specifications,
-    } = product;
-    const {mainPrice, discount} = price;
+function validateProductData(productData) {
+    const errors = {};
 
-    let message;
-    if (!title) message += '* title Field Empty *';
-    if (!brand) message += '* brand Field Empty *';
-    if (!img.length < 3)
-        message += `* image Array Should Contain ['mainImg', 'otherImg01', 'otherImg02'] *`;
-    if (!category) message += `* category Field Empty *`;
-    if (!color) message += `* color Field Empty *`;
-    if (!mainPrice) message += `* mainPrice Field Empty *`;
-    if (!discount) message += `* discount Field Empty *`;
-    if (!description) message += `* description Field Empty *`;
-    if (!Object.keys(specifications).length)
-        message += `* specification Object Empty *`;
+    // Check if required fields are missing
+    if (!productData.title) {
+        errors.title = 'Title is required.';
+    }
+    if (!productData.brand) {
+        errors.brand = 'Brand is required.';
+    }
+    if (
+        !productData.img ||
+        !Array.isArray(productData.img) ||
+        productData.img.length === 0
+    ) {
+        errors.img = 'At least one image URL is required.';
+    }
+    if (!productData.category) {
+        errors.category = 'Category is required.';
+    }
+    if (!productData.color) {
+        errors.color = 'Color is required.';
+    }
+    if (!productData.price || typeof productData.price !== 'object') {
+        errors.price = 'Price is required and should be an object.';
+    } else {
+        if (
+            !productData.price.mainPrice ||
+            typeof productData.price.mainPrice !== 'number'
+        ) {
+            errors.price = 'Main price is required and should be a number.';
+        }
+        if (
+            !productData.price.discountedPrice ||
+            typeof productData.price.discountedPrice !== 'number'
+        ) {
+            errors.price = 'Discount is required and should be a number.';
+        }
+    }
+    if (!productData.description) {
+        errors.description = 'Description is required.';
+    }
+    if (
+        !productData.specifications ||
+        typeof productData.specifications !== 'object'
+    ) {
+        errors.specifications =
+            'Specifications are required and should be an object.';
+    }
 
-    return message;
-};
+    // Return errors object. If it's empty, then there are no errors.
+    return Object.keys(errors).length > 0 ? errors : null;
+}
 
 const addProduct = async function (req, res) {
     try {
-        let checkStatus = checkProductFields(req.body);
-        if (checkStatus) throw new Error(checkStatus);
+        let invalidProduct = validateProductData(req.body);
+        if (invalidProduct) {
+            return res.status(400).json({
+                status: 'fail',
+                error: invalidProduct,
+            });
+        }
 
         const newProduct = new ProductModel(req.body);
         await newProduct.save();
@@ -103,6 +133,7 @@ const getAllProducts = async function (req, res) {
         const {color, category, sort, name, minPrice, maxPrice} = req.query;
 
         const query = {};
+
         if (color) query.color = color;
         if (category) query.category = category;
         if (name) query.title = {$regex: name, $options: 'i'};
@@ -148,3 +179,29 @@ module.exports = {
     getProductByID,
     getAllProducts,
 };
+
+/**
+// Working Routes
+
+// Authentication Route	
+	
+POST	  ${baseURL}/api/auth/registration	
+POST	  ${baseURL}/api/auth/login	
+GET	      ${baseURL}/api/auth/logout
+
+// Users Route
+
+GET 	  ${baseURL}/api/users/:email
+PATCH  	  ${baseURL}/api/users/:email
+DELETE    ${baseURL}/api/users/:email
+GET  	  ${baseURL}/api/search/users/:email
+GET 	  ${baseURL}/api/users/
+
+// Product Route	
+		
+POST      ${baseURL}/api/products/	
+PUT       ${baseURL}/api/products/:id	
+DELETE    ${baseURL}/api/products/:id	
+GET       ${baseURL}/api/products/:id	
+GET       ${baseURL}/api/products/ 	
+ */
