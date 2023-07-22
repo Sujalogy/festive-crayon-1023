@@ -198,7 +198,7 @@
             <div class="before-login-popup" id="before_login_popup">
               <span id="close_popup"><i class="ri-close-line"></i></span>
               <p id="user_name">Hi ConnecTors!</p>
-              <a href="../Page_login/index.html"
+              <a href="./login.html"
                 ><button id="login_btn">Login</button></a
               >
             </div>
@@ -366,19 +366,15 @@
         <p>Hello</p>
         <p>ConnecTors</p>
       </div>
+      <div class="pagename-register">
+        <h1>Login</h1>
+        <p>New to ConnecT? <a href="./register.html">Create an account</a></p>
+      </div>
       <div class="login-form">
-        <form action="">
-          <label for="name"> Name :</label>
-          <br>
-          <input type="text" id="name">
-          <br>
-          <label for="">E-mail :</label>
-          <br>
-          <input type="email">
-          <br>
-          <label for=""> password :</label>
-          <br>
-          <input type="password">
+        <form action="https://connect-api-production.up.railway.app/api/auth/login" method="post">
+          <input type="email" id="email" placeholder="Your E-mail" required>
+          <input type="password" id="password" placeholder="Password" required> 
+          <input type="submit" id="loginBtn" value="Login"/>
         </form>
       </div>
     </section>
