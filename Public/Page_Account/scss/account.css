@@ -1,0 +1,101 @@
+.my-account {
+  margin-bottom: 50px;
+}
+.my-account .head {
+  font-size: 25px;
+  font-weight: 700;
+  margin-top: 30px;
+  text-align: center;
+}
+.my-account .user-details {
+  width: 300px;
+  height: 180px;
+  margin: auto;
+  margin-top: 20px;
+  border: 1px solid #cbc9c9;
+  border-radius: 10px;
+}
+.my-account .user-details .user-name {
+  line-height: 1.5;
+  padding: 15px;
+}
+.my-account .user-details .user-name h1 {
+  font-size: 14px;
+  color: #272727;
+}
+.my-account .user-details .user-name .email {
+  display: flex;
+  justify-content: space-between;
+}
+.my-account .user-details .user-name .email p {
+  font-size: 12px;
+  font-weight: 100;
+  color: #928c8c;
+}
+.my-account .user-details .user-name .email a {
+  background: transparent;
+  cursor: pointer;
+  font-size: 12px;
+  color: #0b7afa;
+  text-decoration: none;
+}
+.my-account .user-details .user-name hr {
+  margin-top: 6px;
+  border: 1px solid #d4d0d0;
+}
+.my-account .user-details .user-name .address {
+  padding: 10px;
+  border: 1px solid #cbc9c9;
+  border-radius: 10px;
+  margin-top: 10px;
+  color: #272727;
+}
+.my-account .user-details .user-name .address p {
+  font-size: 12px;
+  color: #aba9a9;
+}
+.my-account .user-details .user-name .change-password {
+  text-align: center;
+  margin-top: 19px;
+}
+.my-account .user-details .user-name .change-password a {
+  text-decoration: none;
+  font-size: 12px;
+  color: #0b7afa;
+}
+.my-account .-password {
+  width: 400px;
+  margin: auto;
+  margin-top: 30px;
+}
+.my-account .-password form {
+  display: grid;
+  gap: 10px;
+  width: 304px;
+  margin: auto;
+  margin-top: 20px;
+}
+.my-account .-password form input {
+  border: 1px solid #ccc;
+  background-color: rgb(230, 230, 230);
+  width: 300px;
+  border-radius: 5px;
+  height: 40px;
+  text-indent: 10px;
+}
+.my-account .-password form input::-moz-placeholder {
+  color: #aaa7a7;
+}
+.my-account .-password form input::placeholder {
+  color: #aaa7a7;
+}
+.my-account .-password form input[type=submit] {
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  background-color: rgba(83, 169, 255, 0.979);
+}
+.my-account .-password form input[type=submit]:active {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}/*# sourceMappingURL=account.css.map */
