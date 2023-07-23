@@ -17,5 +17,6 @@ productRouter.delete('/:id', verifyAdmin, deleteProduct);
 productRouter.get('/', getAllProducts);
 productRouter.get('/:id', getProductByID);
 productRouter.get('/best/', bestProducts);
+productRouter.get('/new/', newProducts);
 
 module.exports = {productRouter};
