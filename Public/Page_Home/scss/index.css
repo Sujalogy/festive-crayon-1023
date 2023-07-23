@@ -541,3 +541,83 @@ header nav .profile-section .profile-cart .cart-slider-popup.show {
 .main-section {
   padding: 0px 40px;
 }/*# sourceMappingURL=index.css.map */
+
+@media (max-width: 1068px) {
+  body {
+   width:800px
+
+  }
+
+  nav {
+ width: 800px;
+ padding: 10px;
+
+}
+.profile-section{
+  width: 100px;
+float: right;
+  display: inline;
+}
+#search_handle{
+  width: 150px;
+}
+}
+@media (max-width: 700px) {
+  body {
+   width:700px
+
+  }
+
+  nav  {
+ width: 100px;
+ font-size:5px;
+}
+nav img{
+  width: 80px;
+}
+
+
+.profile-section{
+  width: 10px;
+  display: inline;
+  margin-top: 110px;
+}
+#header_div_slider{
+  margin-top: 50px;
+}
+#search_handle{
+  width: 150px;
+}
+}
+@media (max-width: 615px) {
+  body {
+   width:600px
+
+  }
+
+  nav  {
+ width: 50px;
+ font-size:5px;
+}
+nav img{
+  width: 60px;
+  padding-right: 10px;
+}
+#my{
+  font-size: 5px;
+margin-right: 20px;
+}
+
+
+.profile-section{
+  width: 10px;
+  display: inline;
+  margin-top: 110px;
+}
+#header_div_slider{
+  margin-top: 50px;
+}
+#search_handle{
+  width: 150px;
+}
+}
