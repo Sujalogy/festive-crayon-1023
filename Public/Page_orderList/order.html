@@ -2,17 +2,19 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="../Page_login/scss/login.css">
-    <link rel="stylesheet" href="../Page_Home/scss/footer.css">
     <link rel="stylesheet" href="../Page_Home/scss/index.css" />
-    <link rel="stylesheet" href="../Page_login/scss/congrats.css">
+    <link rel="stylesheet" href="../Page_orderList/scss/order.css" />
+    <link rel="stylesheet" href="../Page_login/scss/congrats.css" />
+    <link rel="stylesheet" href="../Page_login/scss/login.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css"
       rel="stylesheet"
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Connect.com | Home Page | Buy EarBuds | ...</title>
+    <!-- !  link alert -------------------------------------------------------------------------------------------------------->
     <link rel="icon" href="../icons/favicon-32x32.png" type="image/x-icon" />
+    <!-- !  link alert -------------------------------------------------------------------------------------------------------->
   </head>
   <body>
     <header>
@@ -20,12 +22,15 @@
       <nav>
         <div class="left-side-nav">
           <div class="logo-section">
+            <!-- !  link alert -------------------------------------------------------------------------------------------------------->
             <a href="../../index.html" class="logo-link">
+              <!-- !  link alert -------------------------------------------------------------------------------------------------------->
               <img
                 src="../logo/connectLogo2-removebg-preview.png"
                 alt="Logo"
                 width="120"
               />
+              <!-- !  link alert -------------------------------------------------------------------------------------------------------->
             </a>
           </div>
           <div class="categories-section">
@@ -191,36 +196,42 @@
             <input type="search" id="search_handle" placeholder="Search here" />
           </div>
           <div class="profile-cart">
+            <!-- !  link alert -------------------------------------------------------------------------------------------------------->
             <img
               src="../icons/user2.png"
               id="before_login_click"
               alt="User ICON"
             />
+            <!-- !  link alert -------------------------------------------------------------------------------------------------------->
             <!--!------LOGIN-POPUP Logout Popup------------------------------------------------------------------------------------------>
             <div class="before-login-popup" id="before_login_popup">
               <span id="close_popup"><i class="ri-close-line"></i></span>
               <p id="user_name">Hi ConnecTors!</p>
-              <a href="./login.html"
+              <!-- !  link alert -------------------------------------------------------------------------------------------------------->
+              <a href="../Page_login/login.html"
                 ><button id="login_btn">Login</button></a
               >
+              <!-- !  link alert -------------------------------------------------------------------------------------------------------->
             </div>
 
             <div class="after-login-popup" id="after_login_popup">
               <span id="close_popup2"><i class="ri-close-line"></i></span>
-              <p id="greet_to_name">Hi <span id="user_name_popup"></span></p>
-              <a href="#">Manage Your Order</a>
-              <a href="#">Account</a>
+              <p id="greet_to_name">Hi Sujal!</p>
+              <!-- !  link alert -------------------------------------------------------------------------------------------------------->
+              <a href="./order.html">Manage Your Order</a>
+              <!-- !  link alert -------------------------------------------------------------------------------------------------------->
+              <a href="../Page_Account/account.html">Account</a>
               <a href="#">WishList <i class="ri-heart-3-fill"></i></a>
               <button id="logout_user">Logout</button>
             </div>
             <!--!------------------------------------------------------------------------------------------------>
-
+            <!-- !  link alert -------------------------------------------------------------------------------------------------------->
             <img
               src="../icons/shopping-bag2.png"
               id="cart_icon"
               alt="cart ICON"
             />
-
+            <!-- !  link alert -------------------------------------------------------------------------------------------------------->
             <!--!------ CART SLIDER------------------------------------------------------------------------------------------>
             <div class="cart-slider-popup" id="cart_slider_popup">
               <div class="main-cart-container">
@@ -323,10 +334,12 @@
                     <div id="if_morethan_1500">
                       <div>
                         <p>
+                          <!-- !  link alert -------------------------------------------------------------------------------------------------------->
                           <img
                             src="../icons/discount.png"
                             alt="discount icon"
                           />
+                          <!-- !  link alert -------------------------------------------------------------------------------------------------------->
                         </p>
                         <p>Get FLAT ₹100 OFF on orders above <br />₹1500</p>
                       </div>
@@ -363,39 +376,46 @@
     </header>
 
     <!-- TODO Main section ----------------- -->
-    <section id="login_header">
-      <div class="login-header">
-        <p>Hello</p>
-        <p>ConnecTors</p>
+
+    <section id="order_list" class="order-list">
+      <div class="heading">
+        <h1>Manage Your Orders</h1>
       </div>
-      <div class="pagename-register">
-        <h1>Register</h1>
-        <p>Already a ConnecTor? <a href="./login.html">Login with your E-mail</a></p>
+      <div class="order-status">
+        <p>Can't see your order here? Check in again after a few minutes.</p>
       </div>
-      <div class="login-form">
-        <form>
-          <input type="text" id="name" name="name" placeholder="Your Name">
-          <input type="email" id="email" name="email" placeholder="Your E-mail">
-          <input type="password" id="password" name="password" placeholder="Password" >
-          <input type="submit" id="registrationBtn" value="Register"/>
-        </form>
-      </div>
-    </section>
-    <section id="show_congrats">
-      <img src="https://symbl-world.akamaized.net/i/webp/90/3f14c188d9e4b258280f5e5c23fb28.webp" alt="">
-      <div class="yoohoo">
-        <h3>Woohooo!!!</h3>
-        <h3>You are successfully registered ..</h3>
-        <p>Redirecting you to the base in</p>
-        <p><span id="redirecting">0</span>&nbsp;seconds...</p>
+      <div class="table">
+        <table>
+          <tr>
+            <th>Order ID</th>
+            <th>Date</th>
+            <th>Payment Type</th>
+            <th>Total</th>
+            <th>Cancel/Replace</th>
+            <th>Address</th>
+            <th>Track</th>
+          </tr>
+          <tr>
+            <td>09873997266378</td>
+            <td>12-08-2000, Tue</td>
+            <td>Cash On Delivery</td>
+            <td>2888.99</td>
+            <td>NA</td>
+            <td>Burari, Delhi</td>
+            <td>Pending</td>
+          </tr>
+        </table>
       </div>
     </section>
 
     <!-- TODO Footer section --------------- -->
+
     <section id="footer" class="footer">
       <div class="alerts-area">
         <div class="picture">
+          <!-- !  link alert -------------------------------------------------------------------------------------------------------->
           <img src="../logo/connectLogo2-removebg-preview.png" alt="logo" />
+          <!-- !  link alert -------------------------------------------------------------------------------------------------------->
           <h2>Subscribe to our email alerts!</h2>
           <form>
             <input type="email" placeholder="Enter your email" />
@@ -476,6 +496,8 @@
       </div>
     </section>
   </body>
-  <script src="../Page_login/js/register.js"></script>
+
+  <script src="../Page_Home/js/index.js"></script>
+  <script src="../Page_login/js/login.js"></script>
   <script src="../Page_login/js/login.nav.js"></script>
 </html>

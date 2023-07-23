@@ -1,0 +1,181 @@
+.main-section {
+  margin-top: 40px;
+  padding: 0px 40px;
+}
+.main-section .best-seller {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.main-section .best-seller p {
+  font-size: 24px;
+}
+.main-section .best-seller p span {
+  font-weight: 600;
+  -webkit-text-decoration: 3px underline rgb(38, 133, 242);
+          text-decoration: 3px underline rgb(38, 133, 242);
+}
+.main-section .best-seller .loop {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+.main-section .best-seller .loop .videos {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.main-section .best-seller .loop .videos video {
+  width: 280px;
+  border-radius: 20px;
+}
+.main-section .best-seller .loop .videos p {
+  font-size: 17px;
+  text-align: center;
+}
+.main-section .daily-deals {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 25px;
+}
+.main-section .daily-deals p {
+  font-size: 24px;
+}
+.main-section .daily-deals p span {
+  font-weight: 600;
+  -webkit-text-decoration: 3px underline rgb(38, 133, 242);
+          text-decoration: 3px underline rgb(38, 133, 242);
+}
+.main-section .daily-deals .header img {
+  position: absolute;
+  width: 93.6%;
+  z-index: -1;
+}
+.main-section .daily-deals .header .flash-time {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.main-section .daily-deals .header .flash-time p {
+  display: inline-block;
+  position: relative;
+  width: 440px;
+  top: 14px;
+  left: 10px;
+  font-size: 28px;
+  font-weight: 200;
+}
+.main-section .daily-deals .header .flash-time p span {
+  font-weight: 600;
+  text-decoration: none;
+}
+.main-section .daily-deals .header .flash-time p:nth-child(2) {
+  position: relative;
+  top: 7px;
+  width: 700px;
+  font-size: 20px;
+}
+.main-section .daily-deals .header .flash-time p:nth-child(2) span {
+  position: relative;
+  top: 8px;
+  font-size: 45px;
+}
+.main-section .daily-deals .daily-products {
+  margin-top: 16px;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  justify-content: space-between;
+}
+.main-section .daily-deals .daily-products .pro {
+  border: 1px solid #e7e2e2;
+  border-radius: 10px;
+  height: 460px;
+}
+.main-section .daily-deals .daily-products .pro .pro-img {
+  width: 100%;
+  text-align: center;
+}
+.main-section .daily-deals .daily-products .pro .pro-img img {
+  width: 280px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.main-section .daily-deals .daily-products .pro .pro-details .pro-rate {
+  padding-left: 10px;
+  padding-top: 20px;
+}
+.main-section .daily-deals .daily-products .pro .pro-details .pro-rate p {
+  font-size: 12px;
+}
+.main-section .daily-deals .daily-products .pro .pro-details .pro-rate p i {
+  font-size: 14px;
+  color: rgb(231, 231, 2);
+}
+.main-section .daily-deals .daily-products .pro .pro-details .pro-title {
+  padding-left: 10px;
+  padding-bottom: 10px;
+  padding-top: 7px;
+}
+.main-section .daily-deals .daily-products .pro .pro-details .pro-title p {
+  font-size: 13px;
+  font-weight: 600;
+}
+.main-section .daily-deals .daily-products .pro .pro-details .pro-title p:nth-child(2) {
+  font-size: 14px;
+  padding-top: 4px;
+}
+.main-section .daily-deals .daily-products .pro .pro-details .pro-title p:nth-child(2) span {
+  font-size: 10px;
+  color: rgb(113, 206, 113);
+  text-decoration: none;
+}
+.main-section .daily-deals .daily-products .pro .pro-details .pro-title p:nth-child(2) span b {
+  color: #cecccc;
+  text-decoration: line-through;
+}
+.main-section .daily-deals .daily-products .pro .pro-details .pro-btn {
+  display: inline;
+  position: relative;
+  bottom: 48px;
+  left: 155px;
+}
+.main-section .daily-deals .daily-products .pro .pro-details .pro-btn button {
+  width: 100px;
+  height: 39px;
+  border-radius: 10px;
+  border: none;
+  background-color: #000;
+  color: white;
+}
+.main-section .by-categories {
+  margin-top: 20px;
+}
+.main-section .by-categories p {
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+.main-section .by-categories p span {
+  font-weight: 600;
+  -webkit-text-decoration: 3px underline rgb(38, 133, 242);
+          text-decoration: 3px underline rgb(38, 133, 242);
+}
+.main-section .by-categories .cate {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+}
+.main-section .by-categories .cate .step {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.main-section .by-categories .cate .step img {
+  margin-left: 25px;
+  width: 80px;
+}
+.main-section .by-categories .cate .step p {
+  text-align: center;
+  display: inline;
+  font-size: 14px;
+  font-weight: 600;
+}/*# sourceMappingURL=main.css.map */

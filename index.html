@@ -3,7 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="./Public/Page_Home/scss/index.css" />
-    <link rel="stylesheet" href="./Public/Page_Home/scss/hero.css">
+    <link rel="stylesheet" href="./Public/Page_Home/scss/hero.css" />
+    <link rel="stylesheet" href="./Public/Page_Home/scss/main.css" />
+    <link rel="stylesheet" href="./Public/Page_Home/scss/footer.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css"
       rel="stylesheet"
@@ -17,6 +19,7 @@
     />
   </head>
   <body>
+    <!-- TODO Header section  ?{DONE} ---------->
     <header>
       <!-- * Navigation section ----------- -->
       <nav>
@@ -209,9 +212,9 @@
 
             <div class="after-login-popup" id="after_login_popup">
               <span id="close_popup2"><i class="ri-close-line"></i></span>
-              <p id="greet_to_name">Hi Sujal!</p>
-              <a href="#">Manage Your Order</a>
-              <a href="#">Account</a>
+              <p id="greet_to_name"></p>
+              <a href="./Public/Page_orderList/order.html">Manage Your Order</a>
+              <a href="./Public/Page_Account/account.html">Account</a>
               <a href="#">WishList <i class="ri-heart-3-fill"></i></a>
               <button id="logout_user">Logout</button>
             </div>
@@ -262,7 +265,6 @@
                     </div>
                   </div>
                   <div class="product-cart-div">
-                    
                     <div class="a-product">
                       <img
                         src="https://www.boat-lifestyle.com/cdn/shop/products/103-pro-pink_160x.png?v=1666696424"
@@ -380,16 +382,360 @@
         />
       </div>
     </header>
-   
-    <!-- TODO Main section ----------------- -->
+
+    <!-- TODO Main section  ? PENDING --------->
     <section id="main_section" class="main-section">
-      <div class="tp">
-        <h1>hello</h1>
+      <div class="best-seller">
+        <p>Explore <span>Bestsellers</span></p>
+        <div class="loop">
+          <div class="videos">
+            <video autoplay>
+              <source
+                src="https://www.boat-lifestyle.com/cdn/shop/files/quinn_RUxbhR7CvjkNtlFUDxgw9.mp4?v=5354683704256941483"
+                type="video/mp4"
+              />
+              Your browser does not support the video tag.
+            </video>
+            <p>Smartwatches</p>
+          </div>
+          <div class="videos">
+            <video autoplay>
+              <source
+                src="https://www.boat-lifestyle.com/cdn/shop/files/quinn_Bejc8URjU1NSXdhabLCmD.mp4?v=6517359867084812371"
+                type="video/mp4"
+              />
+              Your browser does not support the video tag.
+            </video>
+            <p>Wireless Earbuds</p>
+          </div>
+          <div class="videos">
+            <video autoplay>
+              <source
+                src="https://www.boat-lifestyle.com/cdn/shop/files/quinn_OyJHanx4QSdUN3OVGTO7C.mp4?v=14150048875423312161"
+                type="video/mp4"
+              />
+              Your browser does not support the video tag.
+            </video>
+            <p>Neckbands</p>
+          </div>
+          <div class="videos">
+            <video autoplay>
+              <source
+                src="https://www.boat-lifestyle.com/cdn/shop/files/quinn_CpsRIdJWtpXyFN3enwbXd.mp4?v=14881283340894746343"
+                type="video/mp4"
+              />
+              Your browser does not support the video tag.
+            </video>
+            <p>Headphones</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="daily-deals">
+
+        <p>Daily <span>Deals</span></p>
+        <div class="header">
+          <img
+            src="https://www.boat-lifestyle.com/cdn/shop/files/timer-background-desktop_1600x.png?v=1687159254"
+            alt=""
+          />
+          <div class="flash-time">
+            <p>Summer Sale with <span>upto 75%</span> off is here</p>
+            <p>Ending In&nbsp; <span id="hour">10</span> Hours &nbsp; : &nbsp;<span id="min">12</span> Mins &nbsp; : &nbsp; <span id="sec">20</span> Sec</p>
+          </div>
+        </div>
+
+        <div class="daily-products">
+          <div class="pro">
+            <div class="pro-img">
+              <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Wave_Call__1.jpg?v=1689751649" alt="">
+            </div>
+            <div class="pro-details">
+              <div class="pro-rate">
+                <p><i class="ri-star-fill"></i> 4.9</p>
+              </div>
+              <div class="pro-title">
+                <p>Wave Call</p>
+                <p>$1,799 <span><b>$7990</b> 77% off</span></p>
+              </div>
+              <div class="pro-btn">
+                <button>Add To Cart</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="pro">
+            <div class="pro-img">
+              <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/rockerz_ea76e8ff-d95c-49da-b6c9-fca4304dce11.jpg?v=1685686978" alt="">
+            </div>
+            <div class="pro-details">
+              <div class="pro-rate">
+                <p><i class="ri-star-fill"></i> 4.8</p>
+              </div>
+              <div class="pro-title">
+                <p>Rockerz 235 V2</p>
+                <p>$899 <span><b>$2,990</b> 70% off</span></p>
+              </div>
+              <div class="pro-btn">
+                <button>Add To Cart</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="pro">
+            <div class="pro-img">
+              <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/R103_Pro.jpg?v=1687523180" alt="">
+            </div>
+            <div class="pro-details">
+              <div class="pro-rate">
+                <p><i class="ri-star-fill"></i> 4.9</p>
+              </div>
+              <div class="pro-title">
+                <p>Rockerz 103 Pro</p>
+                <p>$1,099 <span><b>$2,490</b> 56% off</span></p>
+              </div>
+              <div class="pro-btn">
+                <button>Add To Cart</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="pro">
+            <div class="pro-img">
+              <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Airdopes-115_1.jpg?v=1686139410" alt="">
+            </div>
+            <div class="pro-details">
+              <div class="pro-rate">
+                <p><i class="ri-star-fill"></i> 4.9</p>
+              </div>
+              <div class="pro-title">
+                <p>Airdopes 115</p>
+                <p>$999 <span><b>$2,990</b> 67% off</span></p>
+              </div>
+              <div class="pro-btn">
+                <button>Add To Cart</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="by-categories">
+        <p>Shop by <span>Categories</span></p>
+        <div class="cate">
+          <div class="step">
+            <img src="https://www.boat-lifestyle.com/cdn/shop/files/True-wireless-earbuds_small.png?v=1684842854" alt="">
+            <p>True Wireless Earbuds</p>
+          </div>
+          <div class="step">
+            <img src="https://www.boat-lifestyle.com/cdn/shop/files/Neckbands_bc6343f4-622f-4ebd-bb36-205643c3bf78_small.png?v=1684842854" alt="">
+            <p>Neckbands</p>
+          </div>
+          <div class="step">
+            <img src="https://www.boat-lifestyle.com/cdn/shop/files/Smartwatches_88f12bcf-24bd-4e3a-aacb-ecc204f62179_small.png?v=1684842853" alt="">
+            <p>Smart Watches</p>
+          </div>
+          <div class="step">
+            <img src="https://www.boat-lifestyle.com/cdn/shop/files/Wireless-Headphones_small.png?v=1684842854" alt="">
+            <p>Wireless Headphones</p>
+          </div>
+          <div class="step">
+            <img src="https://www.boat-lifestyle.com/cdn/shop/files/Wireless-Speaker_small.png?v=1684842854" alt="">
+            <p>Wireless Speakers</p>
+          </div>
+          <div class="step">
+            <img src="https://www.boat-lifestyle.com/cdn/shop/files/Wired-Headphones_small.png?v=1684842854" alt="">
+            <p>Wired Headphones</p>
+          </div>
+          <div class="step">
+            <img src="https://www.boat-lifestyle.com/cdn/shop/files/Wired-Earphones_small.png?v=1684842854" alt="">
+            <p>Wired Earphones</p>
+          </div>
+          <div class="step">
+            <img src="https://www.boat-lifestyle.com/cdn/shop/files/Soundbars_d9a7bdfd-e780-4581-ab85-f2e86f84cd28_small.png?v=1684842854" alt="">
+            <p>Soundbars</p>
+          </div>
+          <div class="step">
+            <img src="https://www.boat-lifestyle.com/cdn/shop/files/Gaming-Headphones_small.png?v=1684842853" alt="">
+            <p>Gaming Headphones</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="daily-deals new-launch">
+
+        <p>New <span>Launch</span></p>
+        <div class="daily-products">
+          <div class="pro">
+            <div class="pro-img">
+              <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Wave_connect_plus.jpg?v=1689751649" alt="">
+            </div>
+            <div class="pro-details">
+              <div class="pro-rate">
+                <p><i class="ri-star-fill"></i> 4.9</p>
+              </div>
+              <div class="pro-title">
+                <p>Wave Call</p>
+                <p>$1,799 <span><b>$7990</b> 77% off</span></p>
+              </div>
+              <div class="pro-btn">
+                <button>Add To Cart</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="pro">
+            <div class="pro-img">
+              <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/wave_armour_2.jpg?v=1689586538" alt="">
+            </div>
+            <div class="pro-details">
+              <div class="pro-rate">
+                <p><i class="ri-star-fill"></i> 4.8</p>
+              </div>
+              <div class="pro-title">
+                <p>Rockerz 235 V2</p>
+                <p>$899 <span><b>$2,990</b> 70% off</span></p>
+              </div>
+              <div class="pro-btn">
+                <button>Add To Cart</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="pro">
+            <div class="pro-img">
+              <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/AD_MAX__1.jpg?v=1689586539" alt="">
+            </div>
+            <div class="pro-details">
+              <div class="pro-rate">
+                <p><i class="ri-star-fill"></i> 4.9</p>
+              </div>
+              <div class="pro-title">
+                <p>Rockerz 103 Pro</p>
+                <p>$1,099 <span><b>$2,490</b> 56% off</span></p>
+              </div>
+              <div class="pro-btn">
+                <button>Add To Cart</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="pro">
+            <div class="pro-img">
+              <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Wave_Call_2_268181d9-df99-4732-ab67-a9bba743e01b.jpg?v=1689586538" alt="">
+            </div>
+            <div class="pro-details">
+              <div class="pro-rate">
+                <p><i class="ri-star-fill"></i> 4.9</p>
+              </div>
+              <div class="pro-title">
+                <p>Airdopes 115</p>
+                <p>$999 <span><b>$2,990</b> 67% off</span></p>
+              </div>
+              <div class="pro-btn">
+                <button>Add To Cart</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- <div class="life-style"></div>
+
+      <div class="best-of"></div>
+
+      <div class="join-tribe"></div> -->
+    </section>
+
+    <!-- TODO Footer section  ? {DONE}---------->
+    <section id="footer" class="footer">
+      <div class="alerts-area">
+        <div class="picture">
+          <img
+            src="./Public/logo/connectLogo2-removebg-preview.png"
+            alt="logo"
+          />
+          <h2>Subscribe to our email alerts!</h2>
+          <form>
+            <input type="email" placeholder="Enter your email" />
+            <button type="submit">
+              <i class="ri-arrow-right-circle-line"></i>
+            </button>
+          </form>
+        </div>
+        <div class="shop">
+          <p>Shop</p>
+          <ul>
+            <li><a href="#">True Wireless Earbuds</a></li>
+            <li><a href="#">Wireless Headphones</a></li>
+            <li><a href="#">Wired Earphones</a></li>
+            <li><a href="#">Wireless Speakers</a></li>
+            <li><a href="#">Home Audio</a></li>
+            <li><a href="#">Mobile Accessories</a></li>
+            <li><a href="#">Smart Watches</a></li>
+            <li><a href="#">TRebel</a></li>
+            <li><a href="#">Misfit</a></li>
+            <li><a href="#">Gift Card</a></li>
+            <li><a href="#">Earn ₹100</a></li>
+          </ul>
+        </div>
+        <div class="help">
+          <p>Help</p>
+          <ul>
+            <li><a href="#">Track Your Order</a></li>
+            <li><a href="#">Warranty &amp; Support</a></li>
+            <li><a href="#">Return Policy</a></li>
+            <li><a href="#">Service Centers</a></li>
+            <li><a href="#">Bulk Orders</a></li>
+            <li><a href="#">FAQs</a></li>
+            <li><a href="#">Why Buy Direct</a></li>
+          </ul>
+        </div>
+        <div class="company">
+          <p>Company</p>
+          <ul>
+            <li><a href="#">About Boat</a></li>
+            <li><a href="#">News</a></li>
+            <li><a href="#">Read Our Blog</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Security</a></li>
+            <li><a href="#">Investor Relations</a></li>
+            <li><a href="#">Social Responsibility</a></li>
+            <li><a href="#">Warranty Policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <!-- <div class="sort-area"></div> -->
+      <div class="main-area">
+        <div class="social">
+          <h1>
+            Let's get social<i class="ri-facebook-fill"></i
+            ><i class="ri-twitter-fill"></i><i class="ri-instagram-line"></i
+            ><i class="ri-youtube-fill"></i><i class="ri-linkedin-fill"></i>
+          </h1>
+        </div>
+        <div class="policy">
+          <li><a href="#">Privacy Policy</a></li>
+          <i class="ri-checkbox-blank-circle-fill"></i>
+          <li><a href="#">Terms &amp; Conditions</a></li>
+        </div>
+        <div class="copyright">
+          <p>
+            <i class="ri-copyright-line"></i> 2023 Masai School Limited. All
+            Rights Reserved.
+          </p>
+        </div>
+        <div class="contact">
+          <p>
+            For queries contact us: Manager, Masai School Limited 5th Floor, SJR
+            Primus, 20th Main Rd, next to Raheja Arcade, 5th Block, Koramangala,
+            Bengaluru, Karnataka 560034
+          </p>
+        </div>
       </div>
     </section>
-  
-    <!-- TODO Footer section --------------- -->
-    
   </body>
   <script src="./Public/Page_Home/js/index.js"></script>
   <script src="./Public/Page_Home/js/hero.js"></script>
