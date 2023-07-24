@@ -89,12 +89,15 @@
 }
 .main-section .daily-deals .daily-products .pro {
   border: 1px solid #e7e2e2;
+  border: 1px solid #000;
   border-radius: 10px;
-  height: 460px;
+  height: 420px;
+  margin-bottom: 10px;
 }
 .main-section .daily-deals .daily-products .pro .pro-img {
   width: 100%;
   text-align: center;
+  border-bottom: 1px solid #cecccc;
 }
 .main-section .daily-deals .daily-products .pro .pro-img img {
   width: 280px;
@@ -118,20 +121,16 @@
   padding-top: 7px;
 }
 .main-section .daily-deals .daily-products .pro .pro-details .pro-title p {
-  font-size: 13px;
+  font-size: 16px;
   font-weight: 600;
 }
 .main-section .daily-deals .daily-products .pro .pro-details .pro-title p:nth-child(2) {
   font-size: 14px;
   padding-top: 4px;
 }
-.main-section .daily-deals .daily-products .pro .pro-details .pro-title p:nth-child(2) span {
-  font-size: 10px;
-  color: rgb(113, 206, 113);
-  text-decoration: none;
-}
-.main-section .daily-deals .daily-products .pro .pro-details .pro-title p:nth-child(2) span b {
+.main-section .daily-deals .daily-products .pro .pro-details .pro-title .main-price {
   color: #cecccc;
+  font-size: 11px;
   text-decoration: line-through;
 }
 .main-section .daily-deals .daily-products .pro .pro-details .pro-btn {
@@ -178,4 +177,39 @@
   display: inline;
   font-size: 14px;
   font-weight: 600;
+}
+.main-section .frees {
+  height: 152px;
+  background-color: rgba(238, 238, 238, 0.5176470588);
+  display: grid;
+  padding: 12px;
+  margin-top: 20px;
+  grid-template-columns: 70px 90px 70px 50px;
+  justify-content: space-evenly;
+  text-align: center;
+}
+.main-section .frees .reliefs {
+  line-height: 1.1;
+  width: 100px;
+}
+.main-section .frees .reliefs img {
+  width: 100px;
+}
+.main-section .frees .reliefs p {
+  font-size: 12px;
+  text-align: center;
+}
+.main-section .frees .reliefs:nth-child(3) img {
+  width: 100px;
+}
+.main-section .life-style {
+  margin-top: 20px;
+}
+.main-section .life-style p {
+  font-size: 24px;
+}
+.main-section .life-style p span {
+  font-weight: 600;
+  -webkit-text-decoration: 3px underline rgb(38, 133, 242);
+          text-decoration: 3px underline rgb(38, 133, 242);
 }/*# sourceMappingURL=main.css.map */
