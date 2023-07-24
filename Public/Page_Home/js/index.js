@@ -1,4 +1,3 @@
-// const baseURL = "https://curious-newt-flip-flops.cyclic.app";
 const baseURL = "https://connect-api-production.up.railway.app";
 
 const before_login_click = document.getElementById("before_login_click");
@@ -105,7 +104,7 @@ logout_btn.addEventListener("click", async () => {
     headers: {
       Authorization: `Bearer ${localStorage.getItem("accessToken")}`,
     },
-  })
+  });
   const result = await res.json();
   console.log(result);
   window.alert(result.message);
@@ -116,25 +115,41 @@ logout_btn.addEventListener("click", async () => {
 // /////////////getting user name////////////////////////////////////////////////////////////////////////
 const fetchUserData = async () => {
   try {
-    const response = await fetch(
-      `${baseURL}/api/users/${localStorage.getItem("user_email")}`,
-      {
-        headers: {
-          "Authorization": ` Bearer ${localStorage.getItem("accessToken")}`,
-        },
-      }
-    );
+    const userEmail = localStorage.getItem("user_email");
+    const accessToken = localStorage.getItem("accessToken");
+
+    if (!userEmail || !accessToken) {
+      console.log("User email or access token not available.");
+      return;
+    }
+
+    const response = await fetch(`${baseURL}/api/users/${userEmail}`, {
+      headers: {
+        Authorization: `Bearer ${localStorage.getItem("accessToken")}`,
+      },
+    });
+
+    if (!response.ok) {
+      throw new Error("Failed to fetch user data: " + response.status);
+    }
+
     const data = await response.json();
-    // console.log(data);
+    if (!data || !data.user || !data.user.name) {
+      throw new Error("Invalid response data.");
+    }
+    console.log(data);
+
     getUserName(data.user.name);
     return data;
   } catch (error) {
     console.log(error);
   }
 };
+
 document.addEventListener("DOMContentLoaded", function () {
   fetchUserData();
 });
+
 const getUserName = (name) => {
   localStorage.setItem("name", name);
 };
@@ -163,20 +178,4 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-// const fetchProducts = async () => {
-//   try {
-//     const response = await fetch(
-//       `${baseURL}/api/products/`,
-//       {
-//         headers: {
-//           "Content-Type": "application/json",
-//         },
-//       }
-//     );
-//     const data = await response.json();
-//     console.log(data)
-//     return data;
-//   } catch (error) {
-//     console.log(error);
-//   }
-// };
+
