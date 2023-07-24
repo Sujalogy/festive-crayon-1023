@@ -146,9 +146,8 @@ const deleteCart = async function (req, res) {
 };
 
 module.exports = {
-    validateCartData,
     addCart,
-    updateCart,
     getCart,
+    updateCart,
     deleteCart,
 };
