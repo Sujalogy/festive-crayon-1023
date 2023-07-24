@@ -1,0 +1,86 @@
+.checkout {
+  .product-cart-div {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #eeeeee84;
+    .a-product {
+      display: flex;
+      padding: 8px 12px;
+      gap: 10px;
+      img {
+        border: none;
+        background-color: #eeeeee84;
+        border-radius: 12px;
+        width: 92px;
+        height: 97px;
+      }
+      .product-details {
+        p {
+          font-size: 14px;
+          font-weight: 600;
+        }
+        h3 {
+          font-size: 17px;
+          font-weight: 700;
+        }
+        .color-quantity {
+          width: 265px;
+          display: flex;
+          margin-top: 10px;
+          justify-content: space-between;
+          span {
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 12px;
+            background-color: #eeeeee84;
+            border: none !important;
+          }
+          .quantity {
+            border: 1px solid #e7e4e4cb;
+            border-radius: 12px;
+            button:nth-child(1) {
+              width: 25px;
+              height: 27px;
+              border-top-left-radius: 10px;
+              border-bottom-left-radius: 10px;
+              background-color: #e7e4e4cb;
+              font-weight: 900;
+              font-size: 16px;
+              border: none;
+              cursor: pointer;
+            }
+            button:nth-child(3) {
+              width: 25px;
+              height: 27px;
+              border-top-right-radius: 10px;
+              border-bottom-right-radius: 10px;
+              background-color: #e7e4e4cb;
+              font-weight: 900;
+              font-size: 16px;
+              border: none;
+              cursor: pointer;
+            }
+            span {
+              width: 30px;
+              height: 27px;
+              border: 1px solid #000;
+              background-color: transparent;
+            }
+          }
+        }
+      }
+    }
+  }
+  #buynow {
+    width: 210px;
+    height: 45px;
+    position: relative;
+    right: 10px;
+    background-color: #1b2024;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 900;
+  }
+}

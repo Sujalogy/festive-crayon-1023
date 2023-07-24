@@ -2,48 +2,49 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="./Public/Page_Home/scss/index.css" />
-    <link rel="stylesheet" href="./Public/Page_Home/scss/hero.css" />
-    <link rel="stylesheet" href="./Public/Page_Home/scss/main.css" />
-    <link rel="stylesheet" href="./Public/Page_Home/scss/footer.css" />
+    <link rel="stylesheet" href="../Page_Account/scss/account.css" />
+    <link rel="stylesheet" href="../Page_Home/scss/index.css" />
+    <link rel="stylesheet" href="../Page_orderList/scss/order.css" />
+    <link rel="stylesheet" href="../Page_login/scss/congrats.css" />
+    <link rel="stylesheet" href="../Page_login/scss/login.css" />
+    <link rel="stylesheet" href="../Page_Account/scss/checkout.css">
     <link
       href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css"
       rel="stylesheet"
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Connect.com | Home Page | Buy EarBuds | ...</title>
-    <link
-      rel="icon"
-      href="./Public/icons/favicon-32x32.png"
-      type="image/x-icon"
-    />
+    <!-- !  link alert -------------------------------------------------------------------------------------------------------->
+    <link rel="icon" href="../icons/favicon-32x32.png" type="image/x-icon" />
+    <!-- !  link alert -------------------------------------------------------------------------------------------------------->
   </head>
-  <body style="background: linear-gradient(to left, #0066ff 0%, #ff0066 100%); color: aliceblue;">
-
   <body>
-    <!-- TODO Header section  ?{DONE} ---------->
     <header>
       <!-- * Navigation section ----------- -->
-      <nav style="background:  linear-gradient(to left, #0066ff 0%, #ff0066 100%);">
+      <nav>
         <div class="left-side-nav">
           <div class="logo-section">
-            <a href="./index.html" class="logo-link">
+            <!-- !  link alert -------------------------------------------------------------------------------------------------------->
+            <a href="../../index.html" class="logo-link">
+              <!-- !  link alert -------------------------------------------------------------------------------------------------------->
               <img
-                src="./Public/logo/connectLogo2-removebg-preview.png"
+                src="../logo/connectLogo2-removebg-preview.png"
                 alt="Logo"
-                width="120" style="background:  linear-gradient(to left, #0066ff 0%, #ff0066 100%);">
+                width="120"
+              />
+              <!-- !  link alert -------------------------------------------------------------------------------------------------------->
             </a>
           </div>
           <div class="categories-section">
-            <ul style="color: aliceblue;">
-              <li id="list_category_click" style="color: aliceblue;">
+            <ul>
+              <li id="list_category_click">
                 <a id="category_dropdown_a" href="#"
-                 style="color: aliceblue;" >Categories<i class="ri-arrow-down-s-line"></i>
+                  >Categories<i class="ri-arrow-down-s-line"></i>
                 </a>
               </li>
               <!--!--------Category Dropdown---------------------------------------------------------------------------------------->
-              <div class="category-dropdown" id="category_dropdown" style="background: linear-gradient(to top, #0000ff 0%, #cc0000 100%);" >
-                <div class="category-list" style="background: linear-gradient(to top, #0000ff 0%, #cc0000 100%);">
+              <div class="category-dropdown" id="category_dropdown">
+                <div class="category-list">
                   <img
                     src="https://www.boat-lifestyle.com/cdn/shop/collections/dropdown-TWS_100x.png?v=1684827062"
                     alt=""
@@ -171,11 +172,11 @@
                 </div>
               </div>
               <!--!------------------------------------------------------------------------------------------------>
-              <li  style="color: aliceblue;"><a href="#"  style="color: aliceblue;">Daily Deals</a></li>
-              <li  id="yy"><a href="# "  style="color: aliceblue;">Gift With Connect</a></li>
-              <li id="my"  style="color: aliceblue;">
-                <a id="more_dropdown_a" href="#" 
-                style="color: aliceblue;" >More<i class="ri-arrow-down-s-line" ></i>
+              <li><a href="#">Daily Deals</a></li>
+              <li><a href="#">Gift With Connect</a></li>
+              <li id="list_more_click">
+                <a id="more_dropdown_a" href="#"
+                  >More<i class="ri-arrow-down-s-line"></i>
                 </a>
               </li>
               <!--!------More Nav Dropdown------------------------------------------------------------------------------------------>
@@ -197,36 +198,42 @@
             <input type="search" id="search_handle" placeholder="Search here" />
           </div>
           <div class="profile-cart">
+            <!-- !  link alert -------------------------------------------------------------------------------------------------------->
             <img
-              src="./Public/icons/user2.png"
+              src="../icons/user2.png"
               id="before_login_click"
               alt="User ICON"
             />
+            <!-- !  link alert -------------------------------------------------------------------------------------------------------->
             <!--!------LOGIN-POPUP Logout Popup------------------------------------------------------------------------------------------>
             <div class="before-login-popup" id="before_login_popup">
               <span id="close_popup"><i class="ri-close-line"></i></span>
               <p id="user_name">Hi ConnecTors!</p>
-              <a href="./Public/Page_login/login.html"
+              <!-- !  link alert -------------------------------------------------------------------------------------------------------->
+              <a href="../Page_login/login.html"
                 ><button id="login_btn">Login</button></a
               >
+              <!-- !  link alert -------------------------------------------------------------------------------------------------------->
             </div>
 
             <div class="after-login-popup" id="after_login_popup">
               <span id="close_popup2"><i class="ri-close-line"></i></span>
-              <p id="greet_to_name"></p>
-              <a href="./Public/Page_orderList/order.html">Manage Your Order</a>
-              <a href="./Public/Page_Account/account.html">Account</a>
+              <p id="greet_to_name">Hi Sujal!</p>
+              <!-- !  link alert -------------------------------------------------------------------------------------------------------->
+              <a href="../Page_orderList/order.html">Manage Your Order</a>
+              <!-- !  link alert -------------------------------------------------------------------------------------------------------->
+              <a href="./account.html">My Account</a>
               <a href="#">WishList <i class="ri-heart-3-fill"></i></a>
               <button id="logout_user">Logout</button>
             </div>
             <!--!------------------------------------------------------------------------------------------------>
-
+            <!-- !  link alert -------------------------------------------------------------------------------------------------------->
             <img
-              src="./Public/icons/shopping-bag2.png"
+              src="../icons/shopping-bag2.png"
               id="cart_icon"
               alt="cart ICON"
             />
-
+            <!-- !  link alert -------------------------------------------------------------------------------------------------------->
             <!--!------ CART SLIDER------------------------------------------------------------------------------------------>
             <div class="cart-slider-popup" id="cart_slider_popup">
               <div class="main-cart-container">
@@ -265,8 +272,61 @@
                       <p><strong>GST</strong> Billing</p>
                     </div>
                   </div>
-                  <div class="product-cart-div" id="product_cart_div">
-                    <!-- append here -->
+                  <div class="product-cart-div">
+                    <div class="a-product">
+                      <img
+                        src="https://www.boat-lifestyle.com/cdn/shop/products/103-pro-pink_160x.png?v=1666696424"
+                        alt=""
+                      />
+                      <div class="product-details">
+                        <p>Rockerz 103 Pro</p>
+                        <h3>$ 1,099</h3>
+                        <div class="color-quantity">
+                          <span>Pink</span>
+                          <div class="quantity">
+                            <button>-</button>
+                            <span>01</span>
+                            <button>+</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="a-product">
+                      <img
+                        src="https://www.boat-lifestyle.com/cdn/shop/products/103-pro-pink_160x.png?v=1666696424"
+                        alt=""
+                      />
+                      <div class="product-details">
+                        <p>Rockerz 103 Pro</p>
+                        <h3>$ 1,099</h3>
+                        <div class="color-quantity">
+                          <span>Pink</span>
+                          <div class="quantity">
+                            <button>-</button>
+                            <span>01</span>
+                            <button>+</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="a-product">
+                      <img
+                        src="https://www.boat-lifestyle.com/cdn/shop/products/103-pro-pink_160x.png?v=1666696424"
+                        alt=""
+                      />
+                      <div class="product-details">
+                        <p>Rockerz 103 Pro</p>
+                        <h3>$ 1,099</h3>
+                        <div class="color-quantity">
+                          <span>Pink</span>
+                          <div class="quantity">
+                            <button>-</button>
+                            <span>01</span>
+                            <button>+</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
 
@@ -276,10 +336,12 @@
                     <div id="if_morethan_1500">
                       <div>
                         <p>
+                          <!-- !  link alert -------------------------------------------------------------------------------------------------------->
                           <img
-                            src="./Public/icons/discount.png"
+                            src="../icons/discount.png"
                             alt="discount icon"
                           />
+                          <!-- !  link alert -------------------------------------------------------------------------------------------------------->
                         </p>
                         <p>Get FLAT ₹100 OFF on orders above <br />₹1500</p>
                       </div>
@@ -301,10 +363,10 @@
                   </div>
                   <div class="checkout">
                     <div>
-                      <p><span id="finalPrice"></span></p>
+                      <p><span>₹ 3,097</span></p>
                       <p><i>Inclusive of all taxes</i></p>
                     </div>
-                    <button><a href="./Public/Page_Account/checkout.html">Confirm Order</a></button>
+                    <button>Confirm Order</button>
                   </div>
                 </div>
               </div>
@@ -313,218 +375,25 @@
           </div>
         </div>
       </nav>
-      <!-- * Hero section ----------------- -->
-      <div class="header-img-slider" id="header_div_slider">
-        <div class="side-button">
-          <span id="left_arrow" class="left-arrow">
-            <i class="ri-arrow-left-circle-fill"></i>
-          </span>
-          <span id="right_arrow" class="right-arrow">
-            <i class="ri-arrow-right-circle-fill"></i>
-          </span>
-        </div>
-        <img
-          id="slide_images"
-          src="https://www.boat-lifestyle.com/cdn/shop/files/ADMAX_desktop_1499_1440x.jpg?v=1689662385"
-          alt=""
-        />
-      </div>
     </header>
 
-    <!-- TODO Main section  ? PENDING --------->
-    <section id="main_section" class="main-section">
-      <div class="best-seller">
-        <p>Explore <span>Bestsellers</span></p>
-        <div class="loop">
-          <div class="videos">
-            <video autoplay>
-              <source
-                src="https://www.boat-lifestyle.com/cdn/shop/files/quinn_RUxbhR7CvjkNtlFUDxgw9.mp4?v=5354683704256941483"
-                type="video/mp4"
-              />
-              Your browser does not support the video tag.
-            </video>
-            <p>Smartwatches</p>
-          </div>
-          <div class="videos">
-            <video autoplay>
-              <source
-                src="https://www.boat-lifestyle.com/cdn/shop/files/quinn_Bejc8URjU1NSXdhabLCmD.mp4?v=6517359867084812371"
-                type="video/mp4"
-              />
-              Your browser does not support the video tag.
-            </video>
-            <p>Wireless Earbuds</p>
-          </div>
-          <div class="videos">
-            <video autoplay>
-              <source
-                src="https://www.boat-lifestyle.com/cdn/shop/files/quinn_OyJHanx4QSdUN3OVGTO7C.mp4?v=14150048875423312161"
-                type="video/mp4"
-              />
-              Your browser does not support the video tag.
-            </video>
-            <p>Neckbands</p>
-          </div>
-          <div class="videos">
-            <video autoplay>
-              <source
-                src="https://www.boat-lifestyle.com/cdn/shop/files/quinn_CpsRIdJWtpXyFN3enwbXd.mp4?v=14881283340894746343"
-                type="video/mp4"
-              />
-              Your browser does not support the video tag.
-            </video>
-            <p>Headphones</p>
-          </div>
-        </div>
+    <!-- TODO Main section ----------------- -->
+
+    <section class="checkout">
+      <div class="product-cart-div" id="product_cart_div">
+        <!-- append here -->
       </div>
-
-      <div class="daily-deals">
-        <p>Daily <span>Deals</span></p>
-        <div class="header">
-          <img
-            src="https://www.boat-lifestyle.com/cdn/shop/files/timer-background-desktop_1600x.png?v=1687159254"
-            alt=""
-          />
-          <div class="flash-time">
-            <p>Summer Sale with <span>upto 75%</span> off is here</p>
-            <p>
-              Ending In&nbsp; <span id="hour">10</span> Hours &nbsp; :
-              &nbsp;<span id="min">12</span> Mins &nbsp; : &nbsp;
-              <span id="sec">20</span> Sec
-            </p>
-          </div>
-        </div>
-        <div class="daily-products" id="daily_products"><!--append here--></div>
-      </div>
-
-      <div class="by-categories">
-        <p>Shop by <span>Categories</span></p>
-        <div class="cate">
-          <div class="step">
-            <img
-              src="https://www.boat-lifestyle.com/cdn/shop/files/True-wireless-earbuds_small.png?v=1684842854"
-              alt=""
-            />
-            <p>True Wireless Earbuds</p>
-          </div>
-          <div class="step">
-            <img
-              src="https://www.boat-lifestyle.com/cdn/shop/files/Neckbands_bc6343f4-622f-4ebd-bb36-205643c3bf78_small.png?v=1684842854"
-              alt=""
-            />
-            <p>Neckbands</p>
-          </div>
-          <div class="step">
-            <img
-              src="https://www.boat-lifestyle.com/cdn/shop/files/Smartwatches_88f12bcf-24bd-4e3a-aacb-ecc204f62179_small.png?v=1684842853"
-              alt=""
-            />
-            <p>Smart Watches</p>
-          </div>
-          <div class="step">
-            <img
-              src="https://www.boat-lifestyle.com/cdn/shop/files/Wireless-Headphones_small.png?v=1684842854"
-              alt=""
-            />
-            <p>Wireless Headphones</p>
-          </div>
-          <div class="step">
-            <img
-              src="https://www.boat-lifestyle.com/cdn/shop/files/Wireless-Speaker_small.png?v=1684842854"
-              alt=""
-            />
-            <p>Wireless Speakers</p>
-          </div>
-          <div class="step">
-            <img
-              src="https://www.boat-lifestyle.com/cdn/shop/files/Wired-Headphones_small.png?v=1684842854"
-              alt=""
-            />
-            <p>Wired Headphones</p>
-          </div>
-          <div class="step">
-            <img
-              src="https://www.boat-lifestyle.com/cdn/shop/files/Wired-Earphones_small.png?v=1684842854"
-              alt=""
-            />
-            <p>Wired Earphones</p>
-          </div>
-          <div class="step">
-            <img
-              src="https://www.boat-lifestyle.com/cdn/shop/files/Soundbars_d9a7bdfd-e780-4581-ab85-f2e86f84cd28_small.png?v=1684842854"
-              alt=""
-            />
-            <p>Soundbars</p>
-          </div>
-          <div class="step">
-            <img
-              src="https://www.boat-lifestyle.com/cdn/shop/files/Gaming-Headphones_small.png?v=1684842853"
-              alt=""
-            />
-            <p>Gaming Headphones</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="daily-deals new-launch">
-        <p>New <span>Launch</span></p>
-        <div class="daily-products" id="daily_products2">
-          <!--append here-->
-        </div>
-      </div>
-
-      <div class="frees">
-        <div class="reliefs">
-          <img
-            src="https://www.boat-lifestyle.com/cdn/shop/files/Group_334305_small.svg?v=1682336123"
-            alt=""
-          />
-          <p><strong>1 Year</strong> Warranty</p>
-        </div>
-        <div class="reliefs">
-          <img
-            src="https://www.boat-lifestyle.com/cdn/shop/files/Group_334304_small.svg?v=1682336123"
-            alt=""
-          />
-          <p><strong>7 Day</strong> Replacement</p>
-        </div>
-        <div class="reliefs">
-          <img
-            src="https://www.boat-lifestyle.com/cdn/shop/files/Group_334303_small.svg?v=1682336123"
-            alt=""
-          />
-          <p><strong>Free</strong> Shipping</p>
-        </div>
-        <div class="reliefs">
-          <img
-            src="https://www.boat-lifestyle.com/cdn/shop/files/Group_334302_small.svg?v=1682336123"
-            alt=""
-          />
-          <p><strong>GST</strong> Billing</p>
-        </div>
-      </div>
-
-      <!-- <div class="life-style">
-        <p>Shop by <span>Lifestyle</span></p>
-        <div class="celeb">
-
-        </div>
-      </div> -->
-
-      <!-- <div class="best-of"> </div> -->
-
-      <!-- <div class="join-tribe"></div> -->
+      <button id="buynow"><a href="./congrats.html">Buy Now</a></button>
     </section>
 
-    <!-- TODO Footer section  ? {DONE}---------->
+    <!-- TODO Footer section --------------- -->
+
     <section id="footer" class="footer">
       <div class="alerts-area">
         <div class="picture">
-          <img
-            src="./Public/logo/connectLogo2-removebg-preview.png"
-            alt="logo"
-          />
+          <!-- !  link alert -------------------------------------------------------------------------------------------------------->
+          <img src="../logo/connectLogo2-removebg-preview.png" alt="logo" />
+          <!-- !  link alert -------------------------------------------------------------------------------------------------------->
           <h2>Subscribe to our email alerts!</h2>
           <form>
             <input type="email" placeholder="Enter your email" />
@@ -605,8 +474,11 @@
       </div>
     </section>
   </body>
-  <script src="./Public/Page_Home/js/index.js"></script>
-  <script src="./Public/Page_Home/js/hero.js"></script>
-  <script src="./Public/Page_Home/js/cart.js"></script>
-  <script src="./Public/Page_Home/js/fetchProducts.js"></script>
+
+  <script src="../Page_Home/js/index.js"></script>
+  <script src="../Page_login/js/login.js"></script>
+  <script src="../Page_login/js/login.nav.js"></script>
+  <script src="../Page_Account/js/edit_profile.js"></script>
+  <script src="../Page_Home/js/fetchProducts.js"></script>
+  <script src="../Page_Home/js/cart.js"></script>
 </html>
