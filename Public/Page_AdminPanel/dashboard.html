@@ -57,6 +57,13 @@
         height: 40px;
         border-radius: 10px;
       }
+      #specification {
+        margin-left: 50px;
+        margin-bottom: 10px;
+        width: 40%;
+        height: 40px;
+        border-radius: 10px;
+      }
       #category{
         margin-left: 25px;
         margin-bottom: 10px;
@@ -64,8 +71,15 @@
         height: 40px;
         border-radius: 10px;
       }
-      #price{
-        margin-left: 60px;
+      #mainprice{
+        margin-left: 22px;
+        margin-bottom: 10px;
+        width: 40%;
+        height: 40px;
+        border-radius: 10px;
+      }
+      #discountedprice {
+        margin-left: 22px;
         margin-bottom: 10px;
         width: 40%;
         height: 40px;
@@ -85,7 +99,24 @@
          background-color: rgb(19, 19, 80);
          color: white;
       }
+
+      .profile {
+        /* border: 2px solid red; */
+        margin-top: -50px;
+      }
       
+      .admin-img {
+        /* border: 2px solid red; */
+        top: -50px;
+      }
+
+      .report-body input {
+        /* border: 2px solid red; */
+        /* margin: auto; */
+        align-items: center;
+        justify-content: center;
+        margin-left: 1000px;
+      }
     </style>
   </head>
 
@@ -251,14 +282,12 @@
           <div class="admin">
             <div>
                 <p class="name">
-                    Arpit Jana (FW24_227)
+                   Sujal Singh(FW24_227)
                 </p>
                 <p class="email">
-                    email : arpitjana@gmail.com
+                    email : sujal@gmail.com
                 </p>
-                <p class="mobile">
-                    mobile : +91 7047809373
-                </p>
+                
             </div>
             <div class="admin-img">
               <img
@@ -271,14 +300,12 @@
 
             <div>
               <p class="name">
-                  Arpit Jana (FW24_227)
+                Kamal Preet(FW23_0135)
               </p>
               <p class="email">
-                  email : arpitjana@gmail.com
+                  email : kamalpreet@gmail.com
               </p>
-              <p class="mobile">
-                  mobile : +91 7047809373
-              </p>
+              
           </div>
           <div class="admin-img">
             <img
@@ -291,14 +318,12 @@
 
           <div>
             <p class="name">
-                Arpit Jana (FW24_227)
+             Bhaswati Mandal(FW24_227)
             </p>
             <p class="email">
-                email : arpitjana@gmail.com
+                email : Bhaswati@gmail.com
             </p>
-            <p class="mobile">
-                mobile : +91 7047809373
-            </p>
+            
         </div>
         <div class="admin-img">
           <img
@@ -316,9 +341,7 @@
           <p class="email">
               email : arpitjana@gmail.com
           </p>
-          <p class="mobile">
-              mobile : +91 7047809373
-          </p>
+          
       </div>
       <div class="admin-img">
         <img
@@ -418,12 +441,6 @@
           </div>
 
           <div class="report-body">
-            <!-- <div class="report-topic-heading">
-              <h3 class="t-op">Name</h3>
-              <h3 class="t-op">Email</h3>
-              <h3 class="t-op">Price</h3>
-              <h3 class="t-op">Status</h3>
-            </div> -->
             <label for="id">Enter product id</label>
             <input type="number" id="productid" placeholder="Enter product id">
             <br>
@@ -437,14 +454,20 @@
               <label for="brand">Enter product brand</label>
               <input type="text" id="brand" placeholder="Enter product brand">
               <br>
+              <label for="specification">Enter product Specs</label>
+              <input type="text" id="specification" placeholder="Enter product specification">
+              <br>
               <label for="category">Enter product category</label>
-              <input type="text" id="category" placeholder="Enter product brand">
+              <input type="text" id="category" placeholder="Enter product category">
               <br>
               <label for="description">Enter product description</label>
               <input type="text" id="description" placeholder="Enter product description">
               <br>
-              <label for="price">Enter product price</label>
-              <input type="number" id="price" placeholder="Enter product price">
+              <label for="mainprice">Enter product Main Price</label>
+              <input type="number" id="mainprice" placeholder="Enter product main price">
+              <br>
+              <label for="discountedprice">Enter product Disc. Price</label>
+              <input type="number" id="discountedprice" placeholder="Enter product discounted price">
               <br>
               <button id="addproduct">Add product</button>
               <br>
@@ -519,7 +542,7 @@
       </div>
     </div>
     <script src="./login_admin_dashboard.js"></script>
-    <script src="addproduct.js"></script>
+    <script src="./addproduct.js"></script>
    
   </body>
 </html>
